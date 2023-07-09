@@ -9,8 +9,22 @@ header {
             list-style-type: none;
             @include flex-center(row);
 
+            @include tablet {
+                width: 45%;
+                justify-content: start;
+            }
+
+            @include mobile {
+                width: 100%;
+                justify-content: center;
+            }
+
             li {
                 padding: 0px 15px;
+
+                @include desktop {
+                    padding: 0px 10px;
+                }
 
                 a {
                     color: $text;
@@ -27,19 +41,46 @@ header {
         .logo {
             display: block;
             text-align: center;
+            @include tablet {
+                width: 25%;
+
+                img{
+                    max-width: 100%;
+
+                }
+            }
+
+            @include mobile {
+                width: 100%;
+            }
         }
 
         .login-btn {
             list-style-type: none;
             @include flex-center(row);
             justify-content: end;
+            @include tablet {
+                width: 30%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+            @include small-mobiles {
+                padding-top: 15px;
+            }
 
             li {
                 padding: 0px 15px;
+                @include tablet {
+                    padding: 0px 5px;
+                }
 
                 a {
                     color: $text;
                     padding: 15px 20px;
+                    @include tablet {
+                        padding: 15px 5px;
+                    }
 
                     &:hover {
                         color: #fff;
@@ -58,8 +99,18 @@ header {
 
     .banner-cover {
         padding: 25px 0px;
+        flex-direction: column-reverse;
 
         .banner-col-1 {
+            @include mobile {
+                width: 100%;
+                padding: 20px 0px;
+            }
+
+            @include small-mobiles {
+                padding: 20px 0px;
+                padding-left: 10px;
+            }
 
             .banner-tag {
 
@@ -90,6 +141,10 @@ header {
                     font-weight: 600;
                     color: $text2;
                     letter-spacing: 3px;
+
+                    @include small-mobiles{
+                        font-size: $font-size-30;
+                    }
                 }
             }
 
@@ -128,6 +183,10 @@ header {
                     padding: 10px 0px;
                     text-align: left;
 
+                    @include tablet {
+                        width: 26.66%;
+                    }
+
                     a {
                         color: $text;
                         font-weight: 600;
@@ -139,6 +198,10 @@ header {
                     width: 25%;
                     padding: 10px 0px;
                     text-align: center;
+
+                    @include tablet {
+                        width: 26.66%;
+                    }
                     
                 }
 
@@ -146,8 +209,24 @@ header {
                     width: 10%;
                     text-align: center;
                     color: $hover;
+
+                    @include tablet {
+                        width: 10%;
+                    }
                 }
 
+            }
+        }
+
+        .banner-col-2{
+            @include mobile {
+                width: 100%;
+            }
+            
+            img{
+                @include desktop {
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -159,6 +238,10 @@ footer{
   display: block;
   position: relative;
 
+  @include desktop {
+    width: 90%;
+  }
+
     .section-achievements{
         @include flex-center(row);
         justify-content: center;
@@ -166,11 +249,28 @@ footer{
         top: -55px;
         padding-bottom: 50px;
 
+        @include desktop {
+            top: 0px;
+        }
+
         .achievements-col{
             width: 20%;
             padding: 25px 25px;
             background-color: #fff;
             margin: 0px 5px;
+
+            @include desktop {
+                width: 22.5%;
+            }
+
+            @include tablet {
+                width: 45%;
+                margin: 5px;
+            }
+
+            @include small-mobiles{
+                width: 100%;
+            }
 
             &:hover{
                background-color: $btn;

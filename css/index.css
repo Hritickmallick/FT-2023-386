@@ -30,8 +30,25 @@ header .nav-bar .menu-links {
   align-items: center;
   flex-direction: row;
 }
+@media screen and (max-width: 992px) {
+  header .nav-bar .menu-links {
+    width: 45%;
+    justify-content: start;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .nav-bar .menu-links {
+    width: 100%;
+    justify-content: center;
+  }
+}
 header .nav-bar .menu-links li {
   padding: 0px 15px;
+}
+@media screen and (max-width: 1200px) {
+  header .nav-bar .menu-links li {
+    padding: 0px 10px;
+  }
 }
 header .nav-bar .menu-links li a {
   color: #8f8888;
@@ -45,6 +62,19 @@ header .nav-bar .logo {
   display: block;
   text-align: center;
 }
+@media screen and (max-width: 992px) {
+  header .nav-bar .logo {
+    width: 25%;
+  }
+  header .nav-bar .logo img {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .nav-bar .logo {
+    width: 100%;
+  }
+}
 header .nav-bar .login-btn {
   list-style-type: none;
   display: flex;
@@ -52,12 +82,37 @@ header .nav-bar .login-btn {
   flex-direction: row;
   justify-content: end;
 }
+@media screen and (max-width: 992px) {
+  header .nav-bar .login-btn {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .nav-bar .login-btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 567px) {
+  header .nav-bar .login-btn {
+    padding-top: 15px;
+  }
+}
 header .nav-bar .login-btn li {
   padding: 0px 15px;
+}
+@media screen and (max-width: 992px) {
+  header .nav-bar .login-btn li {
+    padding: 0px 5px;
+  }
 }
 header .nav-bar .login-btn li a {
   color: #8f8888;
   padding: 15px 20px;
+}
+@media screen and (max-width: 992px) {
+  header .nav-bar .login-btn li a {
+    padding: 15px 5px;
+  }
 }
 header .nav-bar .login-btn li a:hover {
   color: #fff;
@@ -67,6 +122,19 @@ header .nav-bar .login-btn li a:hover {
 
 .section-banner .banner-cover {
   padding: 25px 0px;
+  flex-direction: column-reverse;
+}
+@media screen and (max-width: 767px) {
+  .section-banner .banner-cover .banner-col-1 {
+    width: 100%;
+    padding: 20px 0px;
+  }
+}
+@media screen and (max-width: 567px) {
+  .section-banner .banner-cover .banner-col-1 {
+    padding: 20px 0px;
+    padding-left: 10px;
+  }
 }
 .section-banner .banner-cover .banner-col-1 .banner-tag span {
   color: #25585b;
@@ -91,6 +159,11 @@ header .nav-bar .login-btn li a:hover {
   font-weight: 600;
   color: #2e2e2e;
   letter-spacing: 3px;
+}
+@media screen and (max-width: 567px) {
+  .section-banner .banner-cover .banner-col-1 .banner-heading h1 {
+    font-size: 1.875rem;
+  }
 }
 .section-banner .banner-cover .banner-col-1 .banner-content {
   padding: 10px 0px;
@@ -122,6 +195,11 @@ header .nav-bar .login-btn li a:hover {
   padding: 10px 0px;
   text-align: left;
 }
+@media screen and (max-width: 992px) {
+  .section-banner .banner-cover .banner-col-1 .banner-tags li {
+    width: 26.66%;
+  }
+}
 .section-banner .banner-cover .banner-col-1 .banner-tags li a {
   color: #8f8888;
   font-weight: 600;
@@ -131,10 +209,30 @@ header .nav-bar .login-btn li a:hover {
   padding: 10px 0px;
   text-align: center;
 }
+@media screen and (max-width: 992px) {
+  .section-banner .banner-cover .banner-col-1 .banner-tags .bullet-text {
+    width: 26.66%;
+  }
+}
 .section-banner .banner-cover .banner-col-1 .banner-tags .bullet-icons {
   width: 10%;
   text-align: center;
   color: #d9cf0d;
+}
+@media screen and (max-width: 992px) {
+  .section-banner .banner-cover .banner-col-1 .banner-tags .bullet-icons {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-banner .banner-cover .banner-col-2 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-banner .banner-cover .banner-col-2 img {
+    max-width: 100%;
+  }
 }
 
 footer {
@@ -142,6 +240,11 @@ footer {
   margin: 0 auto;
   display: block;
   position: relative;
+}
+@media screen and (max-width: 1200px) {
+  footer {
+    width: 90%;
+  }
 }
 footer .section-achievements {
   display: flex;
@@ -152,11 +255,32 @@ footer .section-achievements {
   top: -55px;
   padding-bottom: 50px;
 }
+@media screen and (max-width: 1200px) {
+  footer .section-achievements {
+    top: 0px;
+  }
+}
 footer .section-achievements .achievements-col {
   width: 20%;
   padding: 25px 25px;
   background-color: #fff;
   margin: 0px 5px;
+}
+@media screen and (max-width: 1200px) {
+  footer .section-achievements .achievements-col {
+    width: 22.5%;
+  }
+}
+@media screen and (max-width: 992px) {
+  footer .section-achievements .achievements-col {
+    width: 45%;
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 567px) {
+  footer .section-achievements .achievements-col {
+    width: 100%;
+  }
 }
 footer .section-achievements .achievements-col:hover {
   background-color: #25585b;
