@@ -9,14 +9,8 @@ header {
             list-style-type: none;
             @include flex-center(row);
 
-            @include tablet {
-                width: 45%;
-                justify-content: start;
-            }
-
             @include mobile {
-                width: 100%;
-                justify-content: center;
+                justify-content: right;
             }
 
             li {
@@ -24,6 +18,10 @@ header {
 
                 @include desktop {
                     padding: 0px 10px;
+                }
+
+                @include tablet{
+                    padding: 0px 3px;
                 }
 
                 a {
@@ -49,24 +47,25 @@ header {
 
                 }
             }
-
-            @include mobile {
-                width: 100%;
-            }
         }
 
         .login-btn {
             list-style-type: none;
             @include flex-center(row);
             justify-content: end;
-            @include tablet {
-                width: 30%;
+            
+            @include tablet{
+                margin: 0;
             }
-            @include mobile {
-                width: 100%;
+
+            @include mobile{
+                padding: 0;
+                padding-top: 0;
             }
+    
             @include small-mobiles {
                 padding-top: 15px;
+                justify-content: right;
             }
 
             li {
@@ -99,11 +98,10 @@ header {
 
     .banner-cover {
         padding: 25px 0px;
-        flex-direction: column-reverse;
 
         .banner-col-1 {
             @include mobile {
-                width: 100%;
+               
                 padding: 20px 0px;
             }
 
@@ -219,57 +217,36 @@ header {
         }
 
         .banner-col-2{
-            @include mobile {
-                width: 100%;
-            }
-            
+        
             img{
-                @include desktop {
-                    max-width: 100%;
-                }
+              max-width: 100%;
             }
         }
     }
 }
 
 footer{
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-
-  @include desktop {
-    width: 90%;
-  }
 
     .section-achievements{
-        @include flex-center(row);
-        justify-content: center;
-        position: absolute;
-        top: -55px;
         padding-bottom: 50px;
+        width: 80%;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        position: relative;
+        top: -55px;
 
-        @include desktop {
-            top: 0px;
+        @include tablet{
+            flex-wrap: wrap;
         }
 
         .achievements-col{
-            width: 20%;
+           
             padding: 25px 25px;
             background-color: #fff;
             margin: 0px 5px;
 
-            @include desktop {
-                width: 22.5%;
-            }
-
-            @include tablet {
-                width: 45%;
+            @include tablet{
                 margin: 5px;
-            }
-
-            @include small-mobiles{
-                width: 100%;
             }
 
             &:hover{
