@@ -1,3 +1,5 @@
+// declaring color, font-sizes as variables
+
 $backgrnd: #f5f5f5;
 $btn: #007a82;
 $text: #716e6e;
@@ -52,30 +54,3 @@ $font-size-90: 5.625rem; //90px
 $font-size-100: 6.25rem; //100px
 $font-size-112: 7rem; //112px
 
-//check 1024
-@mixin desktop{
-    @media screen and (max-width:1200px){
-        @content;
-    }
-}
-
-//check 768
-@mixin tablet{
-    @media screen and (max-width:992px){
-        @content;
-    }
-}
-
-//check 578
-@mixin mobile{
-    @media screen and (max-width:767px){  
-        @content;
-    }
-}
-
-//check 375
-@mixin small-mobiles{
-    @media screen and (max-width:567px){
-        @content;
-    }
-}

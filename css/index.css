@@ -67,9 +67,9 @@ header .nav-bar .logo {
   display: block;
   text-align: center;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
   header .nav-bar .logo {
-    width: 25%;
+    text-align: left;
   }
   header .nav-bar .logo img {
     max-width: 100%;

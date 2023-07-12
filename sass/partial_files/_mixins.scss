@@ -1,5 +1,36 @@
+// created a mixin function for using flexbox and also defined screen sizes for making responsive designs
+
 @mixin flex-center($direction){
     display: flex;
     align-items: center;
     flex-direction: $direction;
+}
+
+
+//check 1024
+@mixin desktop{
+    @media screen and (max-width:1200px){
+        @content;
+    }
+}
+
+//check 768
+@mixin tablet{
+    @media screen and (max-width:992px){
+        @content;
+    }
+}
+
+//check 578
+@mixin mobile{
+    @media screen and (max-width:767px){  
+        @content;
+    }
+}
+
+//check 375
+@mixin small-mobiles{
+    @media screen and (max-width:567px){
+        @content;
+    }
 }

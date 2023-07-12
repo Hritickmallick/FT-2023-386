@@ -1,4 +1,8 @@
+// imported all the partial files
+
 @import '../partial_files/importers';
+
+//generating css for the main section
 
 section {
 
@@ -44,7 +48,7 @@ section {
                     font-size: $font-size-90;
                     line-height: 1;
                     color: $text2;
-                    font-family: 'bebas-nue';
+                    font-family: 'bebas-nue';  //imported from the _typography
 
                     @include small-mobiles{
                         font-size: $font-size-30;
@@ -74,7 +78,7 @@ section {
             }
 
             .banner-tags {
-                @include flex-center(row);
+                @include flex-center(row);  //imported from _mixin
                 list-style-type: none;
                 flex-wrap: wrap;
                 padding-top: 50px;

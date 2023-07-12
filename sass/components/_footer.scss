@@ -1,9 +1,13 @@
+//importing all the partial files
+
 @import '../partial_files/importers';
 
+//generating css for the footer section
+
 footer{
-    background-color: #fff;
-    
-        .section-achievements{
+    background-color: #fff;   
+
+        .section-achievements{   
             padding-bottom: 50px;
             justify-content: center;
             position: relative;

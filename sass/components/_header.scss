@@ -1,8 +1,13 @@
+//importing all the partial files
+
 @import '../partial_files/importers';
+
+//generating css for the header section which includes a nav-bar, a logo and two buttons
 
 header {
 
-    .nav-bar {
+    //using bootstrap classes for generating a hamburger menu which will popup when it is opened in a screen size of less than 576px
+    .nav-bar {                        
         padding: 20px 0px;
 
         .menu-links {
@@ -37,8 +42,9 @@ header {
         .logo {
             display: block;
             text-align: center;
-            @include tablet {
-                width: 25%;
+            
+            @include mobile {
+                text-align: left;
 
                 img{
                     max-width: 100%;
@@ -46,6 +52,7 @@ header {
                 }
             }
         }
+            
 
         .login-btn {
             list-style-type: none;
