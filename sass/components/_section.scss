@@ -1,0 +1,129 @@
+@import '../partial_files/importers';
+
+section {
+
+    .banner-cover {
+        padding: 25px 0px;
+
+        .banner-col-1 {
+            @include mobile {
+               
+                padding: 20px 0px;
+            }
+
+            @include small-mobiles {
+                padding: 20px 0px;
+                padding-left: 10px;
+            }
+
+            .banner-tag {
+
+                span {
+                    color: $btn;
+                    font-weight: 600;
+                    
+
+                    &::before {
+                        content: " ";
+                        background-color: $hover;
+                        display: inline-block;
+                        height: 3px;
+                        width: 80px;
+                        vertical-align: middle;
+                        margin-right: 18px;
+                        border-radius: 20px;
+
+                    }
+                }
+            }
+
+            .banner-heading {
+                padding: 15px 0px;
+
+                h1 {
+                    font-size: $font-size-90;
+                    line-height: 1;
+                    color: $text2;
+                    font-family: 'bebas-nue';
+
+                    @include small-mobiles{
+                        font-size: $font-size-30;
+                    }
+                }
+            }
+
+            .banner-content {
+                padding: 10px 0px;
+                padding-bottom: 20px;
+
+                p {
+                    color: $text;
+                }
+            }
+
+            .banner-btn {
+                padding: 15px 25px;
+                background-color: $btn;
+                border-radius: 25px;
+                display: inline;
+
+                a {
+
+                    color: #fff;
+                }
+            }
+
+            .banner-tags {
+                @include flex-center(row);
+                list-style-type: none;
+                flex-wrap: wrap;
+                padding-top: 50px;
+                padding-left: 0;
+
+                li {
+                    width: 16%;
+                    padding: 10px 0px;
+                    text-align: left;
+
+                    @include tablet {
+                        width: 26.66%;
+                    }
+
+                    a {
+                        color: $text;
+                    }
+
+                }
+
+                .bullet-text{
+                    width: 25%;
+                    padding: 10px 0px;
+                    text-align: center;
+
+                    @include tablet {
+                        width: 26.66%;
+                    }
+                    
+                }
+
+                .bullet-icons {
+                    width: 10%;
+                    text-align: center;
+                    color: $hover;
+
+                    @include tablet {
+                        width: 10%;
+                    }
+                }
+
+            }
+        }
+
+        .banner-col-2{
+        
+            img{
+              max-width: 100%;
+            }
+        }
+    }
+}

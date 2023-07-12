@@ -1,0 +1,67 @@
+@import '../partial_files/importers';
+
+footer{
+    background-color: #fff;
+    
+        .section-achievements{
+            padding-bottom: 50px;
+            justify-content: center;
+            position: relative;
+            top: -55px;
+    
+            .achievements-col{
+               
+                padding: 25px 25px;
+                background-color: #fff;
+                margin: 0px 5px;
+                box-shadow: 13px 11px 20px 0px #807e7e;;
+    
+                @include tablet{
+                    margin: 5px;
+                }
+    
+                &:hover{
+                   background-color: $btn;
+                }
+    
+                &:hover .achievements-header span{
+                    color: $hover;
+                }
+    
+                &:hover .achievements-content{
+                    color: #fff;
+                }
+    
+    
+                .achievements-header{
+                    padding-bottom: 10px;
+    
+                    span{
+                        display: block;
+                        font-size: $font-size-22;
+                        line-height: 1.0;
+                        -webkit-text-stroke-width: 1px;
+                        color: $btn;
+                        font-family: 600;
+                    }
+                }
+    
+                .achievements-content{
+                    font-size: $font-size-16;
+                    color: $text;
+    
+                    &::after{
+                        content: " ";
+                        background-color: $hover;
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        border-radius: 25px;
+                        
+                    }
+                    
+                }
+            }
+        }
+    }
+                    
