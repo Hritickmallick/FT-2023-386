@@ -1,6 +1,6 @@
 // imported all the partial files
 
-@import '../partial_files/importers';
+@use '../partial_files/importers';
 
 //generating css for the main section
 
@@ -10,123 +10,127 @@ section {
         padding: 25px 0px;
 
         .banner-col-1 {
-            @include mobile {
-               
+            @include importers.mobile {
+
                 padding: 20px 0px;
             }
 
-            @include small-mobiles {
+            @include importers.small-mobiles {
                 padding: 20px 0px;
                 padding-left: 10px;
             }
 
-            .banner-tag {
+            main {
 
-                span {
-                    color: $btn;
-                    font-weight: 600;
-                    
+                .banner-tag {
 
-                    &::before {
-                        content: " ";
-                        background-color: $hover;
-                        display: inline-block;
-                        height: 3px;
-                        width: 80px;
-                        vertical-align: middle;
-                        margin-right: 18px;
-                        border-radius: 20px;
+                    span {
+                        color: importers.$btn;
+                        font-weight: 800;
 
+
+                        &::before {
+                            content: " ";
+                            background-color: importers.$hover;
+                            display: inline-block;
+                            height: 3px;
+                            width: 80px;
+                            vertical-align: middle;
+                            margin-right: 18px;
+                            border-radius: 20px;
+
+                        }
                     }
                 }
-            }
 
-            .banner-heading {
-                padding: 15px 0px;
+                .banner-heading {
+                    padding: 15px 0px;
 
-                h1 {
-                    font-size: $font-size-90;
-                    line-height: 1;
-                    color: $text2;
-                    font-family: 'bebas-nue';  //imported from the _typography
+                    h1 {
+                        font-size: importers.$font-size-90;
+                        line-height: 1;
+                        color: importers.$text2;
+                        font-family: 'bebas-nue'; //imported from the _typography
 
-                    @include small-mobiles{
-                        font-size: $font-size-30;
+                        @include importers.small-mobiles {
+                            font-size: importers.$font-size-30;
+                        }
                     }
                 }
-            }
 
-            .banner-content {
-                padding: 10px 0px;
-                padding-bottom: 20px;
-
-                p {
-                    color: $text;
-                }
-            }
-
-            .banner-btn {
-                padding: 15px 25px;
-                background-color: $btn;
-                border-radius: 25px;
-                display: inline;
-
-                a {
-
-                    color: #fff;
-                }
-            }
-
-            .banner-tags {
-                @include flex-center(row);  //imported from _mixin
-                list-style-type: none;
-                flex-wrap: wrap;
-                padding-top: 50px;
-                padding-left: 0;
-
-                li {
-                    width: 16%;
+                .banner-content {
                     padding: 10px 0px;
-                    text-align: left;
+                    padding-bottom: 20px;
 
-                    @include tablet {
-                        width: 26.66%;
+                    p {
+                        color: importers.$text;
+                        
                     }
+                }
+
+                .banner-btn {
+                    padding: 15px 25px;
+                    background-color: importers.$btn;
+                    border-radius: 25px;
+                    display: inline;
 
                     a {
-                        color: $text;
-                    }
 
+                        color: #fff;
+                    }
                 }
 
-                .bullet-text{
-                    width: 25%;
-                    padding: 10px 0px;
-                    text-align: center;
+                .banner-tags {
+                    @include importers.flex-center(row); //imported from _mixin
+                    list-style-type: none;
+                    flex-wrap: wrap;
+                    padding-top: 50px;
+                    padding-left: 0;
 
-                    @include tablet {
-                        width: 26.66%;
+                    li {
+                        width: 16%;
+                        padding: 10px 0px;
+                        text-align: left;
+
+                        @include importers.tablet {
+                            width: 26.66%;
+                        }
+
+                        a {
+                            color: importers.$text;
+                        }
+
                     }
-                    
-                }
 
-                .bullet-icons {
-                    width: 10%;
-                    text-align: center;
-                    color: $hover;
+                    .bullet-text {
+                        width: 25%;
+                        padding: 10px 0px;
+                        text-align: center;
 
-                    @include tablet {
+                        @include importers.tablet {
+                            width: 26.66%;
+                        }
+
+                    }
+
+                    .bullet-icons {
                         width: 10%;
-                    }
-                }
+                        text-align: center;
+                        color: importers.$hover;
 
+                        @include importers.tablet {
+                            width: 10%;
+                        }
+                    }
+
+                }
             }
         }
 
-        .banner-col-2{
-        
-            img{
-              max-width: 100%;
+        .banner-col-2 {
+
+            img {
+                max-width: 100%;
             }
         }
     }

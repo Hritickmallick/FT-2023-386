@@ -1,17 +1,18 @@
-@import '../partial_files/importers';
+@use '../partial_files/importers';
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-body{
-    font-family: 'Lato';
-    background-color: $backgrnd;
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    background-color: importers.$backgrnd;
 }
 
-a{
+a {
     text-decoration: none;
 }
