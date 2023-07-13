@@ -139,25 +139,25 @@ header .nav-bar .login-btn li a:hover {
   background-color: #007a82;
 }
 
-section .banner-cover {
+main section .banner-cover {
   padding: 25px 0px;
 }
 @media screen and (max-width: 767px) {
-  section .banner-cover .banner-col-1 {
+  main section .banner-cover .banner-col-1 {
     padding: 20px 0px;
   }
 }
 @media screen and (max-width: 567px) {
-  section .banner-cover .banner-col-1 {
+  main section .banner-cover .banner-col-1 {
     padding: 20px 0px;
     padding-left: 10px;
   }
 }
-section .banner-cover .banner-col-1 main .banner-tag span {
+main section .banner-cover .banner-col-1 .banner-tag span {
   color: #007a82;
   font-weight: 800;
 }
-section .banner-cover .banner-col-1 main .banner-tag span::before {
+main section .banner-cover .banner-col-1 .banner-tag span::before {
   content: " ";
   background-color: #febb0c;
   display: inline-block;
@@ -167,37 +167,37 @@ section .banner-cover .banner-col-1 main .banner-tag span::before {
   margin-right: 18px;
   border-radius: 20px;
 }
-section .banner-cover .banner-col-1 main .banner-heading {
+main section .banner-cover .banner-col-1 .banner-heading {
   padding: 15px 0px;
 }
-section .banner-cover .banner-col-1 main .banner-heading h1 {
+main section .banner-cover .banner-col-1 .banner-heading h1 {
   font-size: 5.625rem;
   line-height: 1;
   color: #3d3d3d;
   font-family: "bebas-nue";
 }
 @media screen and (max-width: 567px) {
-  section .banner-cover .banner-col-1 main .banner-heading h1 {
+  main section .banner-cover .banner-col-1 .banner-heading h1 {
     font-size: 1.875rem;
   }
 }
-section .banner-cover .banner-col-1 main .banner-content {
+main section .banner-cover .banner-col-1 .banner-content {
   padding: 10px 0px;
   padding-bottom: 20px;
 }
-section .banner-cover .banner-col-1 main .banner-content p {
+main section .banner-cover .banner-col-1 .banner-content p {
   color: #716e6e;
 }
-section .banner-cover .banner-col-1 main .banner-btn {
+main section .banner-cover .banner-col-1 .banner-btn {
   padding: 15px 25px;
   background-color: #007a82;
   border-radius: 25px;
   display: inline;
 }
-section .banner-cover .banner-col-1 main .banner-btn a {
+main section .banner-cover .banner-col-1 .banner-btn a {
   color: #fff;
 }
-section .banner-cover .banner-col-1 main .banner-tags {
+main section .banner-cover .banner-col-1 .banner-tags {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -206,40 +206,45 @@ section .banner-cover .banner-col-1 main .banner-tags {
   padding-top: 50px;
   padding-left: 0;
 }
-section .banner-cover .banner-col-1 main .banner-tags li {
+main section .banner-cover .banner-col-1 .banner-tags li {
   width: 16%;
   padding: 10px 0px;
   text-align: left;
 }
 @media screen and (max-width: 992px) {
-  section .banner-cover .banner-col-1 main .banner-tags li {
+  main section .banner-cover .banner-col-1 .banner-tags li {
     width: 26.66%;
   }
 }
-section .banner-cover .banner-col-1 main .banner-tags li a {
+main section .banner-cover .banner-col-1 .banner-tags li a {
   color: #716e6e;
 }
-section .banner-cover .banner-col-1 main .banner-tags .bullet-text {
+main section .banner-cover .banner-col-1 .banner-tags .bullet-text {
   width: 25%;
   padding: 10px 0px;
   text-align: center;
 }
 @media screen and (max-width: 992px) {
-  section .banner-cover .banner-col-1 main .banner-tags .bullet-text {
+  main section .banner-cover .banner-col-1 .banner-tags .bullet-text {
     width: 26.66%;
   }
 }
-section .banner-cover .banner-col-1 main .banner-tags .bullet-icons {
+main section .banner-cover .banner-col-1 .banner-tags .bullet-icons {
   width: 10%;
   text-align: center;
   color: #febb0c;
 }
 @media screen and (max-width: 992px) {
-  section .banner-cover .banner-col-1 main .banner-tags .bullet-icons {
+  main section .banner-cover .banner-col-1 .banner-tags .bullet-icons {
     width: 10%;
   }
 }
-section .banner-cover .banner-col-2 img {
+@media screen and (max-width: 567px) {
+  main section .banner-cover .banner-col-1 .banner-tags .bullet-icons i {
+    display: none;
+  }
+}
+main section .banner-cover .banner-col-2 img {
   max-width: 100%;
 }
 

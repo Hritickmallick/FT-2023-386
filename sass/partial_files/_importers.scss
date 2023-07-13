@@ -1,16 +1,7 @@
 // imported all the partial files in one
 
-
-// @import '../partial_files/mixins';
-// @import '../partial_files/variables';
-// @import '../partial_files/typography';
-
-
-@use 'mixins' as *;
 @forward 'mixins';
 
-@use 'variables' as *;
 @forward 'variables';
 
-@use 'typography' as *;
 @forward 'typography';

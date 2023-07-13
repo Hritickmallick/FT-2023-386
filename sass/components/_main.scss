@@ -1,37 +1,37 @@
 // imported all the partial files
 
-@use '../partial_files/importers';
+@use '../partial_files/importers' as *;
 
-//generating css for the main section
+// Main section styling
 
-section {
+main {
 
-    .banner-cover {
-        padding: 25px 0px;
+    section {
 
-        .banner-col-1 {
-            @include importers.mobile {
+        .banner-cover {
+            padding: 25px 0px;
 
-                padding: 20px 0px;
-            }
+            .banner-col-1 {
+                @include mobile {
 
-            @include importers.small-mobiles {
-                padding: 20px 0px;
-                padding-left: 10px;
-            }
+                    padding: 20px 0px;
+                }
 
-            main {
+                @include small-mobiles {
+                    padding: 20px 0px;
+                    padding-left: 10px;
+                }
 
                 .banner-tag {
 
                     span {
-                        color: importers.$btn;
+                        color: $btn;
                         font-weight: 800;
 
 
                         &::before {
                             content: " ";
-                            background-color: importers.$hover;
+                            background-color: $hover;
                             display: inline-block;
                             height: 3px;
                             width: 80px;
@@ -47,13 +47,13 @@ section {
                     padding: 15px 0px;
 
                     h1 {
-                        font-size: importers.$font-size-90;
+                        font-size: $font-size-90;
                         line-height: 1;
-                        color: importers.$text2;
+                        color: $text2;
                         font-family: 'bebas-nue'; //imported from the _typography
 
-                        @include importers.small-mobiles {
-                            font-size: importers.$font-size-30;
+                        @include small-mobiles {
+                            font-size: $font-size-30;
                         }
                     }
                 }
@@ -63,14 +63,14 @@ section {
                     padding-bottom: 20px;
 
                     p {
-                        color: importers.$text;
-                        
+                        color: $text;
+
                     }
                 }
 
                 .banner-btn {
                     padding: 15px 25px;
-                    background-color: importers.$btn;
+                    background-color: $btn;
                     border-radius: 25px;
                     display: inline;
 
@@ -81,7 +81,7 @@ section {
                 }
 
                 .banner-tags {
-                    @include importers.flex-center(row); //imported from _mixin
+                    @include flex-center(row); //imported from _mixin
                     list-style-type: none;
                     flex-wrap: wrap;
                     padding-top: 50px;
@@ -92,12 +92,12 @@ section {
                         padding: 10px 0px;
                         text-align: left;
 
-                        @include importers.tablet {
+                        @include tablet {
                             width: 26.66%;
                         }
 
                         a {
-                            color: importers.$text;
+                            color: $text;
                         }
 
                     }
@@ -107,7 +107,7 @@ section {
                         padding: 10px 0px;
                         text-align: center;
 
-                        @include importers.tablet {
+                        @include tablet {
                             width: 26.66%;
                         }
 
@@ -116,21 +116,28 @@ section {
                     .bullet-icons {
                         width: 10%;
                         text-align: center;
-                        color: importers.$hover;
+                        color: $hover;
 
-                        @include importers.tablet {
+                        @include tablet {
                             width: 10%;
+                        }
+
+                        i{
+                            @include small-mobiles{
+                                display: none;
+                            }
                         }
                     }
 
                 }
+
             }
-        }
 
-        .banner-col-2 {
+            .banner-col-2 {
 
-            img {
-                max-width: 100%;
+                img {
+                    max-width: 100%;
+                }
             }
         }
     }

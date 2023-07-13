@@ -1,8 +1,8 @@
 //importing all the partial files
 
-@use '../partial_files/importers';
+@use '../partial_files/importers' as *;
 
-//generating css for the header section which includes a nav-bar, a logo and two buttons
+// Header section styling
 
 header {
 
@@ -12,9 +12,9 @@ header {
 
         .menu-links {
             list-style-type: none;
-            @include importers.flex-center(row);
+            @include flex-center(row);
 
-            @include importers.mobile {
+            @include mobile {
                 justify-content: right;
             }
 
@@ -22,20 +22,20 @@ header {
                 padding: 0px 15px;
 
 
-                @include importers.desktop {
+                @include desktop {
                     padding: 0px 10px;
                 }
 
-                @include importers.tablet {
+                @include tablet {
                     padding: 0px 3px;
                 }
 
                 a {
-                    color: importers.$text;
+                    color: $text;
                     font-family: 'Lato', sans-serif;
 
                     &:hover {
-                        color: importers.$hover;
+                        color: $hover;
                     }
                 }
             }
@@ -45,7 +45,7 @@ header {
             display: block;
             text-align: center;
 
-            @include importers.mobile {
+            @include mobile {
                 text-align: left;
 
                 img {
@@ -58,19 +58,19 @@ header {
 
         .login-btn {
             list-style-type: none;
-            @include importers.flex-center(row);
+            @include flex-center(row);
             justify-content: end;
 
-            @include importers.tablet {
+            @include tablet {
                 margin: 0;
             }
 
-            @include importers.mobile {
+            @include mobile {
                 padding: 0;
                 padding-top: 0;
             }
 
-            @include importers.small-mobiles {
+            @include small-mobiles {
                 padding-top: 15px;
                 justify-content: right;
             }
@@ -78,24 +78,24 @@ header {
             li {
                 padding: 0px 15px;
 
-                @include importers.tablet {
+                @include tablet {
                     padding: 0px 5px;
                 }
 
                 a {
-                    color: importers.$text;
+                    color: $text;
                     padding: 15px 20px;
                     font-family: 'Lato', sans-serif;
                     font-weight: 800;
 
-                    @include importers.tablet {
+                    @include tablet {
                         padding: 15px 5px;
                     }
 
                     &:hover {
                         color: #fff;
                         border-radius: 25px;
-                        background-color: importers.$btn;
+                        background-color: $btn;
 
                     }
                 }

@@ -1,8 +1,8 @@
 //importing all the partial files
 
-@use '../partial_files/importers';
+@use '../partial_files/importers' as *;
 
-//generating css for the footer section
+// Footer section styling
 
 footer{
     background-color: #fff;   
@@ -18,18 +18,18 @@ footer{
                 padding: 25px 25px;
                 background-color: #fff;
                 margin: 0px 5px;
-                box-shadow: 13px 11px 20px 0px #807e7e;;
+                box-shadow: 13px 11px 20px 0px #807e7e;
     
-                @include importers.tablet{
+                @include tablet{
                     margin: 5px;
                 }
     
                 &:hover{
-                   background-color: importers.$btn;
+                   background-color: $btn;
                 }
     
                 &:hover .achievements-header span{
-                    color: importers.$hover;
+                    color: $hover;
                 }
     
                 &:hover .achievements-content{
@@ -42,21 +42,21 @@ footer{
     
                     span{
                         display: block;
-                        font-size: importers.$font-size-22;
+                        font-size: $font-size-22;
                         line-height: 1.0;
                         -webkit-text-stroke-width: 1px;
-                        color: importers.$btn;
+                        color: $btn;
                         font-weight: 800;
                     }
                 }
     
                 .achievements-content{
-                    font-size: importers.$font-size-16;
-                    color: importers.$text;
+                    font-size: $font-size-16;
+                    color: $text;
     
                     &::after{
                         content: " ";
-                        background-color: importers.$hover;
+                        background-color: $hover;
                         display: block;
                         width: 100%;
                         height: 4px;
